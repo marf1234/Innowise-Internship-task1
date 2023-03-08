@@ -1,6 +1,6 @@
 package org.example.ballCharacterization;
 
-public enum Color {
+public enum BallColor {
     BLACK,
     WHITE,
     RED,

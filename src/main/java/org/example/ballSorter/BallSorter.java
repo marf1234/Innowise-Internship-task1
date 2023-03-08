@@ -7,7 +7,7 @@ import java.util.List;
 public class BallSorter {
 
     public static void quickSort(List<Ball> balls, BallComparator comparator) {
-
+        startQuickSortIteration(balls, 0, balls.size() - 1, comparator);
     }
 
     private static void startQuickSortIteration(List<Ball> balls, int lowerLimit, int upperLimit,
@@ -42,6 +42,44 @@ public class BallSorter {
         }
         if (upperLimit > i) {
             startQuickSortIteration(balls, i, upperLimit, comparator);
+        }
+    }
+
+    public static void heapSort(List<Ball> balls, BallComparator comparator) {
+        int size = balls.size();
+
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            heapify(balls, size, i, comparator);
+        }
+
+        for (int i = size - 1; i >= 0; i--) {
+            Ball temp = balls.get(0);
+            balls.set(0, balls.get(i));
+            balls.set(i, temp);
+
+            heapify(balls, i, 0, comparator);
+        }
+    }
+
+    private static void heapify(List<Ball> balls, int size, int root, BallComparator comparator) {
+        int largest = root;
+        int l = 2 * root + 1;
+        int r = 2 * root + 2;
+
+        if (l < size && comparator.compare(balls.get(l), balls.get(largest)) > 0) {
+            largest = l;
+        }
+
+        if (r < size && comparator.compare(balls.get(r), balls.get(largest)) > 0) {
+            largest = r;
+        }
+
+        if (largest != root) {
+            Ball temp = balls.get(root);
+            balls.set(root, balls.get(largest));
+            balls.set(largest, temp);
+
+            heapify(balls, size, largest, comparator);
         }
     }
 }

@@ -1,18 +1,18 @@
 package org.example.entities;
 
-import org.example.ballCharacterization.Color;
+import org.example.ballCharacterization.BallColor;
 
 public class Ball {
     public String manufacturer;
     public double diameter;
     public double price;
-    public Color color;
+    public BallColor ballColor;
 
-    public Ball(String manufacturer, double diameter, double price, Color color) {
+    public Ball(String manufacturer, double diameter, double price, BallColor ballColor) {
         this.manufacturer = manufacturer;
         this.diameter = diameter;
         this.price = price;
-        this.color = color;
+        this.ballColor = ballColor;
     }
 
     public String getManufacturer() {
@@ -39,12 +39,12 @@ public class Ball {
         this.price = price;
     }
 
-    public Color getColor() {
-        return color;
+    public BallColor getColor() {
+        return ballColor;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setColor(BallColor ballColor) {
+        this.ballColor = ballColor;
     }
 
 
