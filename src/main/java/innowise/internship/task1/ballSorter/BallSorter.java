@@ -10,8 +10,7 @@ public class BallSorter {
         startQuickSortIteration(balls, 0, balls.size() - 1, comparator);
     }
 
-    private static void startQuickSortIteration(List<Ball> balls, int lowerLimit, int upperLimit,
-                                                BallComparator comparator) {
+    private static void startQuickSortIteration(List<Ball> balls, int lowerLimit, int upperLimit, BallComparator comparator) {
         if (balls.size() == 0 || lowerLimit >= upperLimit) {
             return;
         }

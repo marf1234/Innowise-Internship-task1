@@ -5,6 +5,6 @@ import innowise.internship.task1.entities.Ball;
 public class BallComparatorByPrice implements BallComparator {
     @Override
     public int compare(Ball ball1, Ball ball2) {
-        return Double.compare(ball1.getDiameter(),ball2.getDiameter());
+        return Double.compare(ball1.getDiameter(), ball2.getDiameter());
     }
 }

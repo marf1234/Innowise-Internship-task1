@@ -12,20 +12,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BallFactoryImplementationTest {
     private BallFactoryImplementation ballFactory;
+
     @BeforeEach
     public void init() {
         ballFactory = new BallFactoryImplementation();
     }
+
     @Test
-    public void createdBallShouldBeFootballBall(){
+    public void createdBallShouldBeFootballBall() {
         Assertions.assertTrue(ballFactory.createBall(BallType.FOOTBALL) instanceof FootballBall);
     }
+
     @Test
-    public void createBallShouldBeBasketBall(){
+    public void createBallShouldBeBasketBall() {
         Assertions.assertTrue(ballFactory.createBall(BallType.BASKETBALL) instanceof BasketballBall);
     }
+
     @Test
-    public void createBallShouldBaseBall(){
+    public void createBallShouldBaseBall() {
         Assertions.assertTrue(ballFactory.createBall(BallType.BASEBALL) instanceof BaseballBall);
     }
 }
