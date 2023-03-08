@@ -1,6 +1,6 @@
-package org.example.ballSorter;
+package innowise.internship.task1.ballSorter;
 
-import org.example.entities.Ball;
+import innowise.internship.task1.entities.Ball;
 
 public class BallComparatorByPrice implements BallComparator {
     @Override

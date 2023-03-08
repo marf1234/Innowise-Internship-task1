@@ -1,6 +1,6 @@
-package org.example.entities;
+package innowise.internship.task1.entities;
 
-import org.example.ballCharacterization.BallColor;
+import innowise.internship.task1.ballCharacterization.BallColor;
 
 public class BaseballBall extends Ball{
 

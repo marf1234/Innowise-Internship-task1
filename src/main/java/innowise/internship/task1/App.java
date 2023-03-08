@@ -1,4 +1,4 @@
-package org.example;
+package innowise.internship.task1;
 
 /**
  * Hello world!

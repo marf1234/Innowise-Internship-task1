@@ -1,4 +1,4 @@
-package org.example.ballCharacterization;
+package innowise.internship.task1.ballCharacterization;
 
 public enum BallColor {
     BLACK,
